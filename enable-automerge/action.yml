@@ -1,0 +1,13 @@
+name: 'Enable Automerge'
+description: 'Enable Automerge with conventional commit headline, body, and merge strategy'
+author: 'Workday'
+inputs:
+  token:
+    required: true
+    description: 'A github token with at least read access to the repository'
+  pullRequestNumber:
+    required: false
+    description: 'Optional manual override of a pull request number. Useful for workflow dispatch jobs.'
+runs:
+  using: 'node20'
+  main: '../dist/actions/enableAutomerge.js'
